@@ -11,7 +11,7 @@ struct SecondContentView: View {
     @State var isDark = false
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
             
             VStack {
                 HStack {
