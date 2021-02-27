@@ -8,26 +8,25 @@
 import SwiftUI
 
 struct SecondContentView: View {
+    @State var isDark = false
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
             
             VStack {
                 HStack {
-                    VStack(alignment: .leading, spacing: 20) {
-                        Text("Hallo Simon")
-                            .bold()
-                            .font(.system(size: 40))
+                    VStack(alignment: .leading, spacing: 1) {
                         
-                        
-                        Text(Date().description(with: .current))
-                            
                     }
+                    Home(isDark: $isDark )
                     
                 }
+                .padding(.top, 45)
             }
         }
+        
         .ignoresSafeArea(.all)
+        
     }
 }
 

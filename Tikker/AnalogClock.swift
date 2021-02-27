@@ -4,6 +4,7 @@
 //
 //  Created by Simon Wachtler on 26/02/21.
 //
+// inspired by: https://youtu.be/BTtERko7j1Y (Thanks for this great Tutorial!)
 
 import SwiftUI
 
@@ -40,9 +41,11 @@ struct Home: View  {
     var body: some View {
         VStack {
             HStack {
-                Text("Analog Clock")
+                Text("Hallo Simon")
+                    .font(.system(size: 40))
                     .font(.title)
                     .fontWeight(.heavy)
+                    .padding(.horizontal, 5)
                 
                 Spacer(minLength: 0)
                 
@@ -100,7 +103,7 @@ struct Home: View  {
                     .fill(Color.primary)
                     .frame(width: 4.5, height: (width - 240) / 2)
                     .offset(y: -(width - 240) / 4)
-                    .rotationEffect(.init(degrees: Double(current_Time.hour) * 30))
+                    .rotationEffect(.init(degrees: Double(current_Time.hour + (current_Time.min / 60)) * 30))
 
                 
                 // Center Circle...
@@ -110,6 +113,20 @@ struct Home: View  {
                 
             }
             .frame(width: width - 80, height: width - 80)
+            
+            // getting Locale REgion Name ...
+            
+            Text(Locale.current.localizedString(forRegionCode: Locale.current.regionCode!) ?? "")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .padding(.top, 35)
+            
+            Text(getTime())
+                .font(.system(size: 45))
+                .fontWeight(.heavy)
+                .padding(.top, 10)
+            
+            
             Spacer(minLength: 0)
         
     }
@@ -138,6 +155,14 @@ struct Home: View  {
             }
         }
 }
+    
+    func getTime() -> String {
+        
+        let format = DateFormatter()
+        format.dateFormat = "hh:mm a"
+
+        return format.string(from: Date())
+    }
 }
 
 // Calculating time...
