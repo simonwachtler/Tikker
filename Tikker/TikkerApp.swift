@@ -11,7 +11,7 @@ import SwiftUI
 struct TikkerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SecondContentView()
         }
     }
 }

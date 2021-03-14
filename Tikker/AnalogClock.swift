@@ -9,7 +9,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct MyAnalogClock: View {
     @State var isDark = false
     var body: some View {
         
@@ -24,18 +24,19 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MyAnalogClock_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+       MyAnalogClock()
     }
 }
 
 
 struct Home: View  {
     @Binding var isDark: Bool
-    var width = UIScreen.main.bounds.width - 120
+    var width = UIScreen.main.bounds.width - 190
     @State var current_Time = Time(min: 0, sec: 0, hour: 0)
     @State var receiver = Timer.publish(every: 1, on: .current, in: .default) .autoconnect()
+    @State private var showingProfile = false
     
     
     var body: some View {
@@ -49,20 +50,43 @@ struct Home: View  {
                 
                 Spacer(minLength: 0)
                 
-                Button(action: {isDark.toggle()}) {
+                Button(action: {showingProfile.toggle()}) {
                     
                     Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 35))
-                        .foregroundColor(.red)
+                        .foregroundColor(.blue)
                         .padding()
                         .clipShape(Circle())
+                        .accessibilityLabel("User Profile")
                     
                 }
+                .sheet(isPresented: $showingProfile, content: {
+                    ProfileHost()
+                })
             }
             .padding()
             
-        
+            HStack {
+            // getting Time...
             
+                VStack(alignment: .leading) {
+            Text(getTime())
+                .font(.system(size: 40))
+                .fontWeight(.heavy)
+                .padding(.top, 10)
+                .multilineTextAlignment(.leading)
+            
+            // getting Date ...
+            
+            Text(getDate())
+                .font(.system(size: 22))
+                .fontWeight(.bold)
+                .multilineTextAlignment(.leading)
+                    
+                }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+
+
             
             ZStack{
                 Circle()
@@ -76,7 +100,7 @@ struct Home: View  {
                     Rectangle()
                         .fill(Color.primary)
                         // 60/12 = 5
-                        .frame(width: 2, height: (i % 5) == 0 ? 15 : 5)
+                        .frame(width: 2, height: (i % 5) == 0 ? 12 : 4)
                         .offset(y: (width - 100) / 2)
                         .rotationEffect(.init(degrees: Double(i) * 6))
                 }
@@ -85,24 +109,24 @@ struct Home: View  {
                 
                 Rectangle()
                     .fill(Color.green)
-                    .frame(width: 2, height: (width - 180) / 1.1)
-                    .offset(y: -(width - 180) / 3)
+                    .frame(width: 1.5, height: (width - 160) / 1.1)
+                    .offset(y: -(width - 170) / 3)
                     .rotationEffect(.init(degrees: Double(current_Time.sec) * 6))
               
                 
                 // Min...
                 Rectangle()
                     .fill(Color.gray)
-                    .frame(width: 4, height: (width - 200) / 1.1)
-                    .offset(y: -(width - 200) / 3)
+                    .frame(width: 3, height: (width - 170) / 1.1)
+                    .offset(y: -(width - 180) / 3)
                     .rotationEffect(.init(degrees: Double(current_Time.min) * 6))
 
                 
                 // Hour
                 Rectangle()
                     .fill(Color.primary)
-                    .frame(width: 4.5, height: (width - 220) / 1.2)
-                    .offset(y: -(width - 240) / 2)
+                    .frame(width: 3.5, height: (width - 190) / 1.2)
+                    .offset(y: -(width - 220) / 2)
                     .rotationEffect(.init(degrees: Double(current_Time.hour + (current_Time.min / 60)) * 30))
 
                 
@@ -113,24 +137,15 @@ struct Home: View  {
                 
             }
             .frame(width: width - 80, height: width - 80 )
-            .padding(EdgeInsets(top: 0, leading: 110, bottom: 0, trailing: 0))
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             
 
-            
-            // getting Time...
-            
-            Text(getTime())
-                .font(.system(size: 40))
-                .fontWeight(.heavy)
-                .padding(.top, 10)
-                .multilineTextAlignment(.leading)
-            
-            // getting Date ...
-            
-            Text(getDate())
-                .font(.system(size: 22))
-                .fontWeight(.bold)
-                .multilineTextAlignment(.leading)
+            }
+            .padding(.top, 10.0)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.blue)
+                    .stroke(Color.blue, lineWidth: 0))
 
             
             Spacer(minLength: 0)

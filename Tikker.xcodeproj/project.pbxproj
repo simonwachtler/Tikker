@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		92CD834225C70D4400AB9B3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CD834125C70D4400AB9B3A /* Preview Assets.xcassets */; };
 		92CD834D25C70D4600AB9B3A /* TikkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD834C25C70D4600AB9B3A /* TikkerTests.swift */; };
 		92CD835825C70D4600AB9B3A /* TikkerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD835725C70D4600AB9B3A /* TikkerUITests.swift */; };
+		92F360B325FE751E00E4E30E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F360B225FE751E00E4E30E /* Profile.swift */; };
+		92F360B825FE752B00E4E30E /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F360B725FE752B00E4E30E /* ProfileHost.swift */; };
+		92F360BD25FE75C500E4E30E /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F360BC25FE75C500E4E30E /* ProfileEditor.swift */; };
+		92F360C225FE7D9700E4E30E /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F360C125FE7D9700E4E30E /* ProfileSummary.swift */; };
+		92F360C825FE817100E4E30E /* BottomBar-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 92F360C725FE817100E4E30E /* BottomBar-SwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,10 @@
 		92CD835325C70D4600AB9B3A /* TikkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TikkerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CD835725C70D4600AB9B3A /* TikkerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikkerUITests.swift; sourceTree = "<group>"; };
 		92CD835925C70D4600AB9B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F360B225FE751E00E4E30E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		92F360B725FE752B00E4E30E /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		92F360BC25FE75C500E4E30E /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
+		92F360C125FE7D9700E4E30E /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F360C825FE817100E4E30E /* BottomBar-SwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +113,7 @@
 				92CD834325C70D4400AB9B3A /* Info.plist */,
 				92CD834025C70D4400AB9B3A /* Preview Content */,
 				924756B525E98EE9003B5947 /* AnalogClock.swift */,
+				92F360AE25FE750600E4E30E /* Profile */,
 			);
 			path = Tikker;
 			sourceTree = "<group>";
@@ -133,6 +144,17 @@
 			path = TikkerUITests;
 			sourceTree = "<group>";
 		};
+		92F360AE25FE750600E4E30E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				92F360B225FE751E00E4E30E /* Profile.swift */,
+				92F360B725FE752B00E4E30E /* ProfileHost.swift */,
+				92F360BC25FE75C500E4E30E /* ProfileEditor.swift */,
+				92F360C125FE7D9700E4E30E /* ProfileSummary.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +171,9 @@
 			dependencies = (
 			);
 			name = Tikker;
+			packageProductDependencies = (
+				92F360C725FE817100E4E30E /* BottomBar-SwiftUI */,
+			);
 			productName = Tikker;
 			productReference = 92CD833725C70D3E00AB9B3A /* Tikker.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 92CD832E25C70D3E00AB9B3A;
+			packageReferences = (
+				92F360C625FE817100E4E30E /* XCRemoteSwiftPackageReference "bottombar-swiftui" */,
+			);
 			productRefGroup = 92CD833825C70D3E00AB9B3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,7 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CD833D25C70D3E00AB9B3A /* ContentView.swift in Sources */,
+				92F360B325FE751E00E4E30E /* Profile.swift in Sources */,
+				92F360C225FE7D9700E4E30E /* ProfileSummary.swift in Sources */,
+				92F360BD25FE75C500E4E30E /* ProfileEditor.swift in Sources */,
 				924756B625E98EE9003B5947 /* AnalogClock.swift in Sources */,
+				92F360B825FE752B00E4E30E /* ProfileHost.swift in Sources */,
 				92CD833B25C70D3E00AB9B3A /* TikkerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92F360C625FE817100E4E30E /* XCRemoteSwiftPackageReference "bottombar-swiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smartvipere75/bottombar-swiftui";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92F360C725FE817100E4E30E /* BottomBar-SwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92F360C625FE817100E4E30E /* XCRemoteSwiftPackageReference "bottombar-swiftui" */;
+			productName = "BottomBar-SwiftUI";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92CD832F25C70D3E00AB9B3A /* Project object */;
 }
