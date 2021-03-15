@@ -12,19 +12,27 @@ struct ProfileSummary: View {
 
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 10) {
-                Section {
-                    Text(profile.firstname)
-                        .bold()
+          VStack(alignment: .leading, spacing: 10) {
+    
+               Text(profile.firstname)
+                      .bold()
                         .font(.title)
 
-                    Text("Birthdate: ") + Text(profile.birthdate, style: .date)
+                 Text("Birthdate: ") + Text(profile.birthdate, style: .date)
+            
+            NavigationLink(destination: Text("Hier kannst du dein Profil bearbeiten")) {
+                Text("Dein Profil")
             }
+           
 
             }
+           
+                .navigationBarTitle("Profil")
+
         }
     }
 }
+
 
 struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {

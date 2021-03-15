@@ -144,7 +144,6 @@ struct Home: View  {
             .padding(.top, 10.0)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.blue)
                     .stroke(Color.blue, lineWidth: 0))
 
             

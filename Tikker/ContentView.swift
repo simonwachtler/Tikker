@@ -14,14 +14,14 @@ struct SecondContentView: View {
     var body: some View {
         
         
-    
+        
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.12), Color.gray.opacity(0.12)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.1), Color.gray.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
             
             VStack {
                 HStack {
                     VStack(alignment: .leading, spacing: 1) {
-
+                        
                     }
                     Home(isDark: $isDark )
                     
@@ -32,12 +32,29 @@ struct SecondContentView: View {
         
         .ignoresSafeArea(.all)
         
+        TabView {
+            SecondContentView()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    Text("Übersicht")
+                }
+            
+            
+            ExplorePage()
+                .tabItem {
+                    Image(systemName: "square.grid.2x2.fill")
+                    Text("Entdecken")
+                }
+        }
+        
     }
-    }
+}
+
+
 
 
 struct SecondContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondContentView()
+            SecondContentView()
     }
 }

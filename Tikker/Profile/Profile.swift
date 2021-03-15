@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Profile {
+struct Profile: Hashable, Codable {
     var firstname: String
     var lastname: String
     var birthdate = Foundation.Date()
