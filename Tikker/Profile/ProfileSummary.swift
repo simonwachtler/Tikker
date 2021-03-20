@@ -5,43 +5,14 @@
 //  Created by Simon Wachtler on 14/03/21.
 //
 
-import AuthenticationServices
 import SwiftUI
 
 
 struct ProfileSummary: View {
-    private let signInButton = ASAuthorizationAppleIDButton()
+    @ObservedObject var vm = ViewModel()
     @State var lolname = ""
     var profile: Profile
     
-    fileprivate func SigninWithAppleButton() -> SignInWithAppleButton {
-        return SignInWithAppleButton(.signUp,
-            onRequest: { request in
-                request.requestedScopes = [.fullName, .email]
-
-            },
-            onCompletion: { result in
-                    switch result {
-                    case .success(let authorization):
-                        //Handle autorization
-                        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-                            let userId = appleIDCredential.user
-                            let identityToken = appleIDCredential.identityToken
-                            let authCode = appleIDCredential.authorizationCode
-                            let email = appleIDCredential.email
-                            let givenName = appleIDCredential.fullName?.givenName
-                            let familyName = appleIDCredential.fullName?.familyName
-                            let state = appleIDCredential.state
-                            // Here you have to send the data to the backend and according to the response let the user get into the app.
-                        }
-                        break
-                    case .failure(let error):
-                        //Handle error
-                        break
-                    }
-                }
-        )
-    }
     
     var body: some View {
         NavigationView {
@@ -59,14 +30,13 @@ struct ProfileSummary: View {
                                 .background(Color.primary.opacity(0.07))
                                 .clipShape(Capsule())
                         }
-                        .padding(.vertical, 2)
+                        
                         NavigationLink(
                             destination: ProfileEditor(profile: Profile.default),
                             label: {
                                 Text("Bearbeiten")
                             })
                     }
-                    SigninWithAppleButton()
                     Section {
                         Link("Quellcode auf Github ansehen", destination: URL(string: "https://github.com/simonwachtler/Tikker")!)
                     }
@@ -74,9 +44,39 @@ struct ProfileSummary: View {
                 }
             }
             .navigationTitle("Einstellungen")
+            
+            
+            
+            VStack {
+                if vm.user != nil {
+                    VStack(alignment: .leading) {
+                        Text("user name: \n\(vm.user!.fullName)")
+                        Text("user email: \n\(vm.user!.email)")
+                        Text("auth state: \n\(vm.user!.authState)")
+                            .foregroundColor(vm.user?.authState == "authorized" ? .green : .primary)
+                    }
+                    
+                }
+                else {
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        AppleIdButton()
+                            .background(Color.primary)
+                            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                            .padding(7)
+                            .frame(width: UIScreen.main.bounds.width * 0.9, height: 50)
+                    }
+                    
+                    .onAppear {
+                        self.vm.getUserInfo()
+                    }
+                    .shadow(color: Color.secondary.opacity(0.5), radius: 10, x: 0, y: 8)
+                }
+            }
         }
     }
 }
+
+
 
 
 

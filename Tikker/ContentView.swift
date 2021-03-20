@@ -55,6 +55,7 @@ struct SecondContentView: View {
 
 struct SecondContentView_Previews: PreviewProvider {
     static var previews: some View {
-            SecondContentView()
+        SecondContentView()
+            .previewDevice("iPhone 11")
     }
 }
