@@ -5,12 +5,43 @@
 //  Created by Simon Wachtler on 14/03/21.
 //
 
-
+import AuthenticationServices
 import SwiftUI
 
+
 struct ProfileSummary: View {
+    private let signInButton = ASAuthorizationAppleIDButton()
     @State var lolname = ""
     var profile: Profile
+    
+    fileprivate func SigninWithAppleButton() -> SignInWithAppleButton {
+        return SignInWithAppleButton(.signUp,
+            onRequest: { request in
+                request.requestedScopes = [.fullName, .email]
+
+            },
+            onCompletion: { result in
+                    switch result {
+                    case .success(let authorization):
+                        //Handle autorization
+                        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                            let userId = appleIDCredential.user
+                            let identityToken = appleIDCredential.identityToken
+                            let authCode = appleIDCredential.authorizationCode
+                            let email = appleIDCredential.email
+                            let givenName = appleIDCredential.fullName?.givenName
+                            let familyName = appleIDCredential.fullName?.familyName
+                            let state = appleIDCredential.state
+                            // Here you have to send the data to the backend and according to the response let the user get into the app.
+                        }
+                        break
+                    case .failure(let error):
+                        //Handle error
+                        break
+                    }
+                }
+        )
+    }
     
     var body: some View {
         NavigationView {
@@ -35,7 +66,7 @@ struct ProfileSummary: View {
                                 Text("Bearbeiten")
                             })
                     }
-                    
+                    SigninWithAppleButton()
                     Section {
                         Link("Quellcode auf Github ansehen", destination: URL(string: "https://github.com/simonwachtler/Tikker")!)
                     }
@@ -46,6 +77,8 @@ struct ProfileSummary: View {
         }
     }
 }
+
+
 
 
 struct ProfileSummary_Previews: PreviewProvider {
