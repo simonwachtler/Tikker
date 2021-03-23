@@ -148,10 +148,17 @@ struct Home: View  {
 
         }
         .padding()
-        .background(Color.white)
+        .background(Color.green)
         .cornerRadius(12)
+        .padding(.horizontal, 5 )
             
-            Spacer(minLength: 0)
+            
+            ZStack {
+            CountdownVOne()
+            }
+            .padding()
+            .background(Color.green)
+            .cornerRadius(12)
         
     }
         .onAppear(perform: {

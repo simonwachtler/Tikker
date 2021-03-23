@@ -8,6 +8,25 @@
 import SwiftUI
 import BottomBar_SwiftUI
 
+struct StartView: View {
+    var body: some View {
+TabView {
+    SecondContentView()
+        .tabItem {
+            Image(systemName: "heart.fill")
+            Text("Übersicht")
+        }
+    
+    
+    ExplorePage()
+        .tabItem {
+            Image(systemName: "square.grid.2x2.fill")
+            Text("Entdecken")
+        }
+}
+}
+
+}
 
 struct SecondContentView: View {
     @State var isDark = false
@@ -32,20 +51,7 @@ struct SecondContentView: View {
         
         .ignoresSafeArea(.all)
         
-        TabView {
-            SecondContentView()
-                .tabItem {
-                    Image(systemName: "heart.fill")
-                    Text("Übersicht")
-                }
-            
-            
-            ExplorePage()
-                .tabItem {
-                    Image(systemName: "square.grid.2x2.fill")
-                    Text("Entdecken")
-                }
-        }
+
         
     }
 }
