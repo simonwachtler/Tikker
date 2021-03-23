@@ -12,6 +12,7 @@
 		92A12E4C260693250054ECAD /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E4B260693250054ECAD /* SignInWithAppleController.swift */; };
 		92A12E5126069B670054ECAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5026069B670054ECAD /* Model.swift */; };
 		92A12E5626069BD50054ECAD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5526069BD50054ECAD /* ViewModel.swift */; };
+		92ABB063260A3ED10050D32B /* CountdownVOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABB062260A3ED10050D32B /* CountdownVOne.swift */; };
 		92CD833B25C70D3E00AB9B3A /* TikkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD833A25C70D3E00AB9B3A /* TikkerApp.swift */; };
 		92CD833D25C70D3E00AB9B3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD833C25C70D3E00AB9B3A /* ContentView.swift */; };
 		92CD833F25C70D4400AB9B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CD833E25C70D4400AB9B3A /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		92A12E4B260693250054ECAD /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
 		92A12E5026069B670054ECAD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		92A12E5526069BD50054ECAD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		92ABB062260A3ED10050D32B /* CountdownVOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownVOne.swift; sourceTree = "<group>"; };
 		92CD833725C70D3E00AB9B3A /* Tikker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tikker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CD833A25C70D3E00AB9B3A /* TikkerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikkerApp.swift; sourceTree = "<group>"; };
 		92CD833C25C70D3E00AB9B3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				924756B525E98EE9003B5947 /* AnalogClock.swift */,
 				92F360AE25FE750600E4E30E /* Profile */,
 				9204B1D925FFD54100F6A191 /* Explore.swift */,
+				92ABB062260A3ED10050D32B /* CountdownVOne.swift */,
 			);
 			path = Tikker;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92ABB063260A3ED10050D32B /* CountdownVOne.swift in Sources */,
 				92CD833D25C70D3E00AB9B3A /* ContentView.swift in Sources */,
 				92F360B325FE751E00E4E30E /* Profile.swift in Sources */,
 				92F360C225FE7D9700E4E30E /* ProfileSummary.swift in Sources */,

@@ -65,7 +65,7 @@ struct Home: View  {
                 })
             }
             .padding()
-            
+        ZStack {
             HStack {
             // getting Time...
             
@@ -146,6 +146,10 @@ struct Home: View  {
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(Color.blue, lineWidth: 0))
 
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(12)
             
             Spacer(minLength: 0)
         
