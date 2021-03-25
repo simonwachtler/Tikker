@@ -10,22 +10,22 @@ import BottomBar_SwiftUI
 
 struct StartView: View {
     var body: some View {
-TabView {
-    SecondContentView()
-        .tabItem {
-            Image(systemName: "heart.fill")
-            Text("Übersicht")
+        TabView {
+            SecondContentView()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    Text("Übersicht")
+                }
+            
+            
+            ExplorePage()
+                .tabItem {
+                    Image(systemName: "square.grid.2x2.fill")
+                    Text("Entdecken")
+                }
         }
+    }
     
-    
-    ExplorePage()
-        .tabItem {
-            Image(systemName: "square.grid.2x2.fill")
-            Text("Entdecken")
-        }
-}
-}
-
 }
 
 struct SecondContentView: View {
@@ -33,25 +33,28 @@ struct SecondContentView: View {
     var body: some View {
         
         
-        
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.1), Color.gray.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
             
             VStack {
                 HStack {
-                    VStack(alignment: .leading, spacing: 1) {
+                    VStack(alignment: .leading) {
                         
                     }
                     Home(isDark: $isDark )
                     
+                    
                 }
+                .padding(.horizontal, 6)
                 .padding(.top, 45)
+                
+                Spacer()
             }
         }
         
         .ignoresSafeArea(.all)
         
-
+        
         
     }
 }
@@ -59,9 +62,9 @@ struct SecondContentView: View {
 
 
 
-struct SecondContentView_Previews: PreviewProvider {
+struct StartView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondContentView()
+        StartView()
             .previewDevice("iPhone 11")
     }
 }

@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9204B1DA25FFD54100F6A191 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9204B1D925FFD54100F6A191 /* Explore.swift */; };
-		924756B625E98EE9003B5947 /* AnalogClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924756B525E98EE9003B5947 /* AnalogClock.swift */; };
+		924756B625E98EE9003B5947 /* Home Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924756B525E98EE9003B5947 /* Home Page.swift */; };
 		92A12E4C260693250054ECAD /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E4B260693250054ECAD /* SignInWithAppleController.swift */; };
 		92A12E5126069B670054ECAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5026069B670054ECAD /* Model.swift */; };
 		92A12E5626069BD50054ECAD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5526069BD50054ECAD /* ViewModel.swift */; };
 		92ABB063260A3ED10050D32B /* CountdownVOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABB062260A3ED10050D32B /* CountdownVOne.swift */; };
+		92CC8C1C260C7FA400427BA4 /* Show time and date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC8C1B260C7FA400427BA4 /* Show time and date.swift */; };
+		92CC8C24260C8FC400427BA4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC8C23260C8FC400427BA4 /* Quote.swift */; };
 		92CD833B25C70D3E00AB9B3A /* TikkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD833A25C70D3E00AB9B3A /* TikkerApp.swift */; };
 		92CD833D25C70D3E00AB9B3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD833C25C70D3E00AB9B3A /* ContentView.swift */; };
 		92CD833F25C70D4400AB9B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CD833E25C70D4400AB9B3A /* Assets.xcassets */; };
@@ -45,12 +47,14 @@
 
 /* Begin PBXFileReference section */
 		9204B1D925FFD54100F6A191 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
-		924756B525E98EE9003B5947 /* AnalogClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClock.swift; sourceTree = "<group>"; };
+		924756B525E98EE9003B5947 /* Home Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home Page.swift"; sourceTree = "<group>"; };
 		92A12E4726068AF70054ECAD /* Tikker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tikker.entitlements; sourceTree = "<group>"; };
 		92A12E4B260693250054ECAD /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
 		92A12E5026069B670054ECAD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		92A12E5526069BD50054ECAD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		92ABB062260A3ED10050D32B /* CountdownVOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownVOne.swift; sourceTree = "<group>"; };
+		92CC8C1B260C7FA400427BA4 /* Show time and date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show time and date.swift"; sourceTree = "<group>"; };
+		92CC8C23260C8FC400427BA4 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		92CD833725C70D3E00AB9B3A /* Tikker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tikker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CD833A25C70D3E00AB9B3A /* TikkerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikkerApp.swift; sourceTree = "<group>"; };
 		92CD833C25C70D3E00AB9B3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,10 +128,12 @@
 				92CD833E25C70D4400AB9B3A /* Assets.xcassets */,
 				92CD834325C70D4400AB9B3A /* Info.plist */,
 				92CD834025C70D4400AB9B3A /* Preview Content */,
-				924756B525E98EE9003B5947 /* AnalogClock.swift */,
+				924756B525E98EE9003B5947 /* Home Page.swift */,
 				92F360AE25FE750600E4E30E /* Profile */,
 				9204B1D925FFD54100F6A191 /* Explore.swift */,
 				92ABB062260A3ED10050D32B /* CountdownVOne.swift */,
+				92CC8C1B260C7FA400427BA4 /* Show time and date.swift */,
+				92CC8C23260C8FC400427BA4 /* Quote.swift */,
 			);
 			path = Tikker;
 			sourceTree = "<group>";
@@ -313,11 +319,13 @@
 				92F360C225FE7D9700E4E30E /* ProfileSummary.swift in Sources */,
 				92A12E5626069BD50054ECAD /* ViewModel.swift in Sources */,
 				92F360BD25FE75C500E4E30E /* ProfileEditor.swift in Sources */,
-				924756B625E98EE9003B5947 /* AnalogClock.swift in Sources */,
+				924756B625E98EE9003B5947 /* Home Page.swift in Sources */,
 				92A12E5126069B670054ECAD /* Model.swift in Sources */,
 				92A12E4C260693250054ECAD /* SignInWithAppleController.swift in Sources */,
 				92F360B825FE752B00E4E30E /* ProfileHost.swift in Sources */,
+				92CC8C1C260C7FA400427BA4 /* Show time and date.swift in Sources */,
 				92CD833B25C70D3E00AB9B3A /* TikkerApp.swift in Sources */,
+				92CC8C24260C8FC400427BA4 /* Quote.swift in Sources */,
 				9204B1DA25FFD54100F6A191 /* Explore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

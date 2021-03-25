@@ -12,6 +12,7 @@ import SwiftUI
 struct CountdownVOne: View {
     var toDate = Calendar.current.date(byAdding: .year, value: 3, to: Date())!
     var body: some View {
+        HStack {
         VStack(alignment: .leading) {
         Text("Deine Lebenserwartung")
             .bold()
@@ -20,8 +21,13 @@ struct CountdownVOne: View {
         Spacer().frame(height:20)
         
         TimerView(setDate: toDate)
+            
+    
         
     }
+            Spacer()
+        }
+        .padding()
     
     }
 }

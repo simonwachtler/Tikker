@@ -67,6 +67,7 @@ struct Home: View  {
             .padding()
         ZStack {
             HStack {
+                Spacer()
             // getting Time...
             
                 VStack(alignment: .leading) {
@@ -139,7 +140,7 @@ struct Home: View  {
             .frame(width: width - 80, height: width - 80 )
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             
-
+Spacer()
             }
             .padding(.top, 10.0)
             .overlay(
@@ -150,17 +151,23 @@ struct Home: View  {
         .padding()
         .background(Color.green)
         .cornerRadius(12)
-        .padding(.horizontal, 5 )
+        .padding(.horizontal, 10 )
             
             
             ZStack {
             CountdownVOne()
             }
-            .padding()
             .background(Color.green)
             .cornerRadius(12)
+            .padding(.horizontal, 10)
+            .padding(.top, 9)
+            
+            
+            Quote()
+
         
     }
+            
         .onAppear(perform: {
             let calendar = Calendar.current
             
