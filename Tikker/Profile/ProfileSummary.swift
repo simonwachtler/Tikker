@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-
-
 struct ProfileSummary: View {
     @ObservedObject var vm = ViewModel()
     @State var lolname = ""
@@ -37,6 +35,7 @@ struct ProfileSummary: View {
                                 Text("Bearbeiten")
                             })
                     }
+
                     Section {
                         Link("Quellcode auf Github ansehen", destination: URL(string: "https://github.com/simonwachtler/Tikker")!)
                     }

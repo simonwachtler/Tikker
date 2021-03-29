@@ -45,7 +45,7 @@ struct SecondContentView: View {
                     
                     
                 }
-                .padding(.horizontal, 6)
+                .padding(.horizontal, 1)
                 .padding(.top, 45)
                 
                 Spacer()

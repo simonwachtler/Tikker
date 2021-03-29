@@ -10,15 +10,16 @@ import SwiftUI
 
 
 struct CountdownVOne: View {
-    var toDate = Calendar.current.date(byAdding: .year, value: 3, to: Date())!
+    @State var toDate = Calendar.current.date(byAdding: .year, value: 3, to: Date())!
     var body: some View {
-        HStack {
-        VStack(alignment: .leading) {
+        HStack(alignment: .center) {
+            Spacer()
+        VStack(alignment: .center) {
         Text("Deine Lebenserwartung")
-            .bold()
+            .fontWeight(.heavy)
             .font(.system(size:25))
         
-        Spacer().frame(height:20)
+        Spacer().frame(height:8)
         
         TimerView(setDate: toDate)
             
@@ -47,23 +48,57 @@ struct TimerView : View {
         }
     }
     var body: some View {
-        Text(TimerFunction(from: setDate))
-             .onAppear(perform: {self.timer
+        Text(TimerFunctionOne(from: setDate))
+            .multilineTextAlignment(.center)
+            .font(.system(size:50))
+            .onAppear(perform: {self.timer
             })
+        
+        Text("Jahre | Monate | Tage")
+            .font(.system(size:20))
+        
+        Spacer().frame(height:5)
+
+        
+        Text(TimerFunctionTwo(from: setDate))
+            .multilineTextAlignment(.center)
+            .font(.system(size:50))
+            .onAppear(perform: {self.timer
+            })
+        
+        Text("Stunden | Minute | Sekunden")
+            .font(.system(size:15))
+
+
+          
     
     }
     
-    func TimerFunction(from date: Date) -> String {
+    func TimerFunctionOne(from date: Date) -> String {
         let calendar = Calendar(identifier: .gregorian)
         let timeValue = calendar
-            .dateComponents([.year, .month, .day, .hour, .minute, .second], from: nowDate, to: setDate)
+            .dateComponents([.year, .month, .day], from: nowDate, to: setDate)
         
-        return String(format: "%02d:%02d:%02d:%02d:%02d",
+        return String(format: "%02d:%02d:%02d",
                       timeValue.year!,
                       timeValue.month!,
-                      timeValue.day!,
+                      timeValue.day!)
+
+        
+    }
+    
+    
+    func TimerFunctionTwo(from date: Date) -> String {
+        let calendar = Calendar(identifier: .gregorian)
+        let timeValue = calendar
+            .dateComponents([.day, .hour, .minute, .second], from: nowDate, to: setDate)
+        
+        return String(format: "%02d:%02d:%02d",
                       timeValue.hour!,
                       timeValue.minute!,
-                      timeValue.second!)
+                      timeValue.second!,
+                      timeValue.day!)
+
+        
     }
 }
