@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9204B1DA25FFD54100F6A191 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9204B1D925FFD54100F6A191 /* Explore.swift */; };
+		9209AA3E2611C11A0099CD66 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209AA3D2611C11A0099CD66 /* MailView.swift */; };
+		9209AA462611C47D0099CD66 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209AA452611C47D0099CD66 /* SettingsCell.swift */; };
 		924756B625E98EE9003B5947 /* Home Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924756B525E98EE9003B5947 /* Home Page.swift */; };
 		92A12E4C260693250054ECAD /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E4B260693250054ECAD /* SignInWithAppleController.swift */; };
 		92A12E5126069B670054ECAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5026069B670054ECAD /* Model.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		9204B1D925FFD54100F6A191 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
+		9209AA3D2611C11A0099CD66 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		9209AA452611C47D0099CD66 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		924756B525E98EE9003B5947 /* Home Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home Page.swift"; sourceTree = "<group>"; };
 		92A12E4726068AF70054ECAD /* Tikker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tikker.entitlements; sourceTree = "<group>"; };
 		92A12E4B260693250054ECAD /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				92ABB062260A3ED10050D32B /* CountdownVOne.swift */,
 				92CC8C1B260C7FA400427BA4 /* Show time and date.swift */,
 				92CC8C23260C8FC400427BA4 /* Quote.swift */,
+				9209AA3D2611C11A0099CD66 /* MailView.swift */,
 			);
 			path = Tikker;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				92A12E4B260693250054ECAD /* SignInWithAppleController.swift */,
 				92A12E5026069B670054ECAD /* Model.swift */,
 				92A12E5526069BD50054ECAD /* ViewModel.swift */,
+				9209AA452611C47D0099CD66 /* SettingsCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				92F360C225FE7D9700E4E30E /* ProfileSummary.swift in Sources */,
 				92A12E5626069BD50054ECAD /* ViewModel.swift in Sources */,
 				92F360BD25FE75C500E4E30E /* ProfileEditor.swift in Sources */,
+				9209AA3E2611C11A0099CD66 /* MailView.swift in Sources */,
 				924756B625E98EE9003B5947 /* Home Page.swift in Sources */,
 				92A12E5126069B670054ECAD /* Model.swift in Sources */,
 				92A12E4C260693250054ECAD /* SignInWithAppleController.swift in Sources */,
@@ -326,6 +333,7 @@
 				92CC8C1C260C7FA400427BA4 /* Show time and date.swift in Sources */,
 				92CD833B25C70D3E00AB9B3A /* TikkerApp.swift in Sources */,
 				92CC8C24260C8FC400427BA4 /* Quote.swift in Sources */,
+				9209AA462611C47D0099CD66 /* SettingsCell.swift in Sources */,
 				9204B1DA25FFD54100F6A191 /* Explore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
