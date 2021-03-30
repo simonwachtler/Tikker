@@ -15,11 +15,8 @@ struct CountdownVOne: View {
         HStack(alignment: .center) {
             Spacer()
         VStack(alignment: .center) {
-        Text("Deine Lebenserwartung")
-            .fontWeight(.heavy)
-            .font(.system(size:25))
+
         
-        Spacer().frame(height:8)
         
         TimerView(setDate: toDate)
             

@@ -24,7 +24,7 @@ struct Quote: View {
         }
         .padding(.vertical, 20)
         .padding(.horizontal, 20)
-        .background(Color.green)
+        .background(Color.white)
         .cornerRadius(12)
         .padding(.vertical, 10)
         .padding(.horizontal, 10)

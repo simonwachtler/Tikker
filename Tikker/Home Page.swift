@@ -54,7 +54,7 @@ struct Home: View  {
                     
                     Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 35))
-                        .foregroundColor(.blue)
+                        .foregroundColor(.pink)
                         .padding()
                         .clipShape(Circle())
                         .accessibilityLabel("User Profile")
@@ -149,15 +149,20 @@ Spacer()
 
         }
         .padding()
-        .background(Color.green)
+        .background(Color.white)
         .cornerRadius(12)
         .padding(.horizontal, 10 )
             
+            Text("Deine Lebenserwartung")
+                .foregroundColor(.pink)
+                .fontWeight(.heavy)
+                .font(.system(size:25))
+                .multilineTextAlignment(.leading)
             
             ZStack {
             CountdownVOne()
             }
-            .background(Color.green)
+            .background(Color.white)
             .cornerRadius(12)
             .padding(.horizontal, 10)
             .padding(.top, 9)
