@@ -4,9 +4,11 @@
 //
 //  Created by Simon Wachtler on 26/02/21.
 //
-// inspired by: https://youtu.be/BTtERko7j1Y (Thanks for this great Tutorial!)
+// Analog Clock inspired by: https://youtu.be/BTtERko7j1Y (Thanks for this great Tutorial!)
 // <a href="https://de.freepik.com/fotos/reise">Reise Foto erstellt von bedneyimages - de.freepik.com</a>
-//
+
+// <a href='https://de.freepik.com/fotos/menschen'>Menschen Foto erstellt von jcomp - de.freepik.com</a>
+
 
 import SwiftUI
 
@@ -43,11 +45,10 @@ struct Home: View  {
     
     var body: some View {
 
-        NavigationView {
-     
-            ScrollView {
+            ScrollView
+                {
                 Spacer()
-                    .frame(height: 37)
+                    .frame(height: 2)
                     HStack {
                         Text("Hallo Simon")
                             .font(.system(size: 40))
@@ -149,7 +150,7 @@ struct Home: View  {
                     
         Spacer()
                     }
-                    .padding(.top, 10.0)
+                    .padding(.top, 0)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(Color.blue, lineWidth: 0))
@@ -158,15 +159,21 @@ struct Home: View  {
                 .padding()
                 .background(Color.white)
                 .cornerRadius(12)
-                .padding(.horizontal, 10 )
+                .padding(.horizontal, 20 )
+                .padding(.top, -10)
                     
          
+                HStack {
                     Text("Deine Lebenserwartung")
-                            .foregroundColor(.pink)
-                            .fontWeight(.heavy)
-                            .font(.system(size:25))
-                            .padding(.top)
-                        .padding(.leading)
+                                .foregroundColor(.pink)
+                                .fontWeight(.heavy)
+                                .font(.system(size:25))
+                                .padding(.top, 20)
+                        .padding(.leading, 25)
+                        .padding(.bottom, -4)
+                    
+                    Spacer()
+                }
                 
                     
                     ZStack {
@@ -174,12 +181,15 @@ struct Home: View  {
                     }
                     .background(Color.white)
                     .cornerRadius(12)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 20)
                     
                     Spacer()
                         .frame(height: 20)
                     
                     Quote()
+                
+                ProTestHome()
+                AddWidgetHome()
 
                 
             }
@@ -209,9 +219,6 @@ struct Home: View  {
                         self.current_Time = Time(min: min, sec: sec, hour: hour)
                     }
             }
-            .ignoresSafeArea(.all)
-        }
-        .ignoresSafeArea(.all)
         
 }
     

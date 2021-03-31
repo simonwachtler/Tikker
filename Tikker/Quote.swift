@@ -16,14 +16,15 @@ struct Quote: View {
                   .resizable()
                     .frame(height: 190, alignment: .top)
         //          .scaledToFit()
-                Spacer()
-                    .frame(height: 12)
+              
             HStack {
                 Spacer()
             Text("Die Zukunft hängt davon ab, was du heute tust!")
                 .font(.system(size: 22))
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .multilineTextAlignment(.center)
+                .padding()
+                .padding(.bottom, 10)
                 Spacer()
             }
                 
@@ -38,7 +39,7 @@ struct Quote: View {
 
         .background(Color.white)
         .padding(.vertical, 10)
-        .padding(.horizontal, 10)
+        .padding(.horizontal, 20)
         
     }
 }

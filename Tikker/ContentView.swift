@@ -32,11 +32,8 @@ struct StartView: View {
 struct SecondContentView: View {
     @State var isDark = false
     var body: some View {
-        
-        NavigationView {
         ZStack {
-           LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.1), Color.gray.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
-        
+        LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.1), Color.gray.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
             VStack {
 
                 HStack {
@@ -47,13 +44,11 @@ struct SecondContentView: View {
                 }
                 .padding(.horizontal, 1)
                 .padding(.top, 35)
+
             }
         }
-        
+
         .ignoresSafeArea(.all)
-        }
-        
-        
     }
 }
 
