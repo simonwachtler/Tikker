@@ -11,6 +11,13 @@ struct Quote: View {
     var body: some View {
         
         ZStack {
+            VStack {
+                Image("quoteimage-1")
+                  .resizable()
+                    .frame(height: 190, alignment: .top)
+        //          .scaledToFit()
+                Spacer()
+                    .frame(height: 12)
             HStack {
                 Spacer()
             Text("Die Zukunft hängt davon ab, was du heute tust!")
@@ -22,10 +29,14 @@ struct Quote: View {
                 
             
         }
-        .padding(.vertical, 20)
-        .padding(.horizontal, 20)
-        .background(Color.white)
+        }
+        
         .cornerRadius(12)
+     //   .padding(.vertical, 20)
+       // .padding(.horizontal, 20)
+        //.cornerRadius(12)
+
+        .background(Color.white)
         .padding(.vertical, 10)
         .padding(.horizontal, 10)
         

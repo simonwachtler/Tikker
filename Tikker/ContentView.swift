@@ -5,6 +5,7 @@
 //  Created by Simon Wachtler on 31/01/21.
 //
 
+
 import SwiftUI
 import BottomBar_SwiftUI
 
@@ -32,28 +33,25 @@ struct SecondContentView: View {
     @State var isDark = false
     var body: some View {
         
-        
+        NavigationView {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.1), Color.gray.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
-            
+           LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.1), Color.gray.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        
             VStack {
+
                 HStack {
-                    VStack(alignment: .leading) {
-                        
-                    }
+  
                     Home(isDark: $isDark )
                     
                     
                 }
                 .padding(.horizontal, 1)
-                .padding(.top, 45)
-                
-                Spacer()
+                .padding(.top, 35)
             }
         }
         
         .ignoresSafeArea(.all)
-        
+        }
         
         
     }
