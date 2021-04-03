@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Profile: Hashable, Codable {
+struct Profile {
     var firstname: String
     var lastname: String
     var birthdate = Foundation.Date()
+    var getNotifications = true
     var prouser = true
 
 

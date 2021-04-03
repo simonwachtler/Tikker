@@ -48,11 +48,11 @@ struct Home: View  {
             ScrollView
                 {
                 Spacer()
-                    .frame(height: 2)
+                    .frame(height: 17)
                     HStack {
                         Text("Hallo Simon")
                             .font(.system(size: 40))
-                            .font(.title)
+                          //  .font(.title)
                             .fontWeight(.heavy)
                             .padding(.horizontal, 5)
                         
@@ -81,7 +81,7 @@ struct Home: View  {
                         VStack(alignment: .leading) {
                     Text(getTime())
                         .font(.system(size: 40))
-                        .fontWeight(.heavy)
+                        .fontWeight(.bold)
                         .padding(.top, 10)
                         .multilineTextAlignment(.leading)
                     
@@ -89,7 +89,7 @@ struct Home: View  {
                     
                     Text(getDate())
                         .font(.system(size: 22))
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .multilineTextAlignment(.leading)
                             
                         }

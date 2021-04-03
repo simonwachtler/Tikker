@@ -17,8 +17,8 @@ struct ProfileSummary: View {
     @ObservedObject var vm = ViewModel()
     @State var lolname = ""
     @State private var showingAlert = false
-    
-    var profile: Profile
+    @State private var getNotifications: Bool = true
+    @Binding var profile: Profile
     
     
     var body: some View {
@@ -28,7 +28,7 @@ struct ProfileSummary: View {
                     Section(header: Text(" Dein Profil")) {
                         
                         NavigationLink(
-                            destination: ProfileEditor(profile: Profile.default),
+                            destination: ProfileEditor(profile: .constant(.default)),
                             label: {
                                 HStack  {
                                     Image(systemName: "person.crop.circle")
@@ -46,6 +46,14 @@ struct ProfileSummary: View {
                                 
                             }
                         )
+                        Toggle(isOn: $getNotifications, label: {
+                                HStack  {
+                                    Image(systemName: "bell.circle")
+                                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                    Text("Benachrichtigungen erhalten")
+                                        .padding(.leading, 10)
+
+                                }                        })
                     }
                     
                     Section(header: Text("Feedback")) {
@@ -203,7 +211,7 @@ struct ProfileSummary: View {
 
 struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileSummary(profile: Profile.default)
+        ProfileSummary(profile: .constant(.default))
             .previewDevice("iPhone 11")
     }
 }

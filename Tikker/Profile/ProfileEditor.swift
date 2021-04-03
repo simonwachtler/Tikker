@@ -8,23 +8,49 @@
 import SwiftUI
 
 struct ProfileEditor: View {
-    var profile: Profile
+    @Binding var profile: Profile
+    
 
+    
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 10) {
-                Text(profile.firstname)
+        NavigationView {
+        Form {
+            Section {
+            HStack {
+                Text("Dein Vorname")
                     .bold()
-                    .font(.title)
-
-                Text("Birthdate: ") + Text(profile.birthdate, style: .date)
+                Divider()
+                TextField("Vorname", text: $profile.firstname)
             }
+                HStack {
+                    Text("Dein Nachname")
+                        .bold()
+                    Divider()
+                    TextField("Nachname", text: $profile.lastname)
+                }
+
+                
+            }
+            
+            DatePicker(selection: $profile.birthdate, displayedComponents: .date) {
+                Text("Dein Geburtstag").bold()
+            }
+        }
+            Section {
+                Toggle(isOn: $profile.getNotifications) {
+                    Text("Erhalte Benachrichtigungen")
+                        .bold()
+            }
+        }
+        .navigationBarTitle("Dein Profil")
         }
     }
 }
 
+
+            
 struct ProfileEditor_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileEditor(profile: Profile.default)
+        ProfileEditor(profile: .constant(.default))
     }
 }
