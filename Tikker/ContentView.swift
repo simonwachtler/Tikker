@@ -38,7 +38,7 @@ struct SecondContentView: View {
 
                 HStack {
   
-                    Home(isDark: $isDark )
+                    Home(profile: .constant(.default), isDark: $isDark)
                     
                     
                 }
