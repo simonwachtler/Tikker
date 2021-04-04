@@ -102,6 +102,18 @@ struct ProfileSummary: View {
                     }
                     Section(header: Text("Rechtliches"), footer: Text("© Simon Wachtler")) {
                         NavigationLink(
+                            destination: Impressum(),
+                            label: {
+                                HStack  {
+                                    Image(systemName: "hand.raised")
+                                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                    Text("Impressum")
+                                        .padding(.leading, 5)
+                                }
+                                
+                            }
+                        )
+                        NavigationLink(
                             destination: AboutTikker(),
                             label: {
                                 HStack  {
@@ -113,19 +125,7 @@ struct ProfileSummary: View {
                                 
                             }
                         )
-                        
-                        NavigationLink(
-                            destination: AboutTikker(),
-                            label: {
-                                HStack  {
-                                    Image(systemName: "hand.raised")
-                                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                    Text("Impressum")
-                                        .padding(.leading, 5)
-                                }
-                                
-                            }
-                        )
+
                     }
                 
                 }

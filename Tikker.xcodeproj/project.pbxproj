@@ -14,6 +14,7 @@
 		924756B625E98EE9003B5947 /* Home Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924756B525E98EE9003B5947 /* Home Page.swift */; };
 		924F8BB62614A75000385C38 /* Pro-Test-Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8BB52614A75000385C38 /* Pro-Test-Home.swift */; };
 		924F8BBB2614AEB700385C38 /* Add-Widget-Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8BBA2614AEB700385C38 /* Add-Widget-Home.swift */; };
+		9284094A261A405B0040C29A /* Impressum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92840949261A405A0040C29A /* Impressum.swift */; };
 		929A872626133D0500473A1C /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A872526133D0500473A1C /* Privacy.swift */; };
 		92A12E4C260693250054ECAD /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E4B260693250054ECAD /* SignInWithAppleController.swift */; };
 		92A12E5126069B670054ECAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5026069B670054ECAD /* Model.swift */; };
@@ -59,6 +60,7 @@
 		924756B525E98EE9003B5947 /* Home Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home Page.swift"; sourceTree = "<group>"; };
 		924F8BB52614A75000385C38 /* Pro-Test-Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pro-Test-Home.swift"; sourceTree = "<group>"; };
 		924F8BBA2614AEB700385C38 /* Add-Widget-Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add-Widget-Home.swift"; sourceTree = "<group>"; };
+		92840949261A405A0040C29A /* Impressum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Impressum.swift; sourceTree = "<group>"; };
 		929A872526133D0500473A1C /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		92A12E4726068AF70054ECAD /* Tikker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tikker.entitlements; sourceTree = "<group>"; };
 		92A12E4B260693250054ECAD /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				929A872526133D0500473A1C /* Privacy.swift */,
 				924F8BB52614A75000385C38 /* Pro-Test-Home.swift */,
 				924F8BBA2614AEB700385C38 /* Add-Widget-Home.swift */,
+				92840949261A405A0040C29A /* Impressum.swift */,
 			);
 			path = Tikker;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				924F8BB62614A75000385C38 /* Pro-Test-Home.swift in Sources */,
 				92ABB063260A3ED10050D32B /* CountdownVOne.swift in Sources */,
 				92CD833D25C70D3E00AB9B3A /* ContentView.swift in Sources */,
+				9284094A261A405B0040C29A /* Impressum.swift in Sources */,
 				92F360B325FE751E00E4E30E /* Profile.swift in Sources */,
 				924F8BBB2614AEB700385C38 /* Add-Widget-Home.swift in Sources */,
 				92F360C225FE7D9700E4E30E /* SettingsScreen.swift in Sources */,
