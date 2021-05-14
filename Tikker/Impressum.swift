@@ -10,7 +10,6 @@ import SwiftUI
 struct Impressum: View {
 
     var body: some View {
-        NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Wachtler Simon")
@@ -66,7 +65,7 @@ struct Impressum: View {
             }
             .navigationBarTitle("Impressum")
 
-        }
+        
     }
     
 

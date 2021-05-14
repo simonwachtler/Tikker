@@ -174,7 +174,7 @@ struct Home: View  {
 
                     
                 }
-                .navigationBarTitle("Hallo \(profile.firstname)")
+                .navigationBarTitle(Text("Hallo \(profile.firstname)!"), displayMode: .automatic)
                 .toolbar {
                     Button(action: {showingProfile.toggle()}) {
                         

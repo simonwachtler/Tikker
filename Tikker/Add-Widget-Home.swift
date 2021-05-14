@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddWidgetHome: View {
+    var width = UIScreen.main.bounds.width - 50
     var body: some View {
         ZStack {
             VStack {
@@ -29,7 +30,7 @@ struct AddWidgetHome: View {
                     label: {
                         Text("Jetzt hinzufügen")
                             .bold()
-                            .frame(width: 350, height: 52)
+                            .frame(width: (width - 15), height: 52)
                             .background(Color.blue)
                             .foregroundColor(Color.white)
                             .cornerRadius(12)

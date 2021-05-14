@@ -8,6 +8,7 @@
 import Foundation
 
 struct Profile {
+    let id: String = UUID().uuidString
     var firstname: String
     var lastname: String
     var birthdate = Foundation.Date()

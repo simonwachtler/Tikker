@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ProTestHome: View {
+    var width = UIScreen.main.bounds.width - 50
     var body: some View {
         VStack(alignment: .leading) {
         Text("Nutze Tikker bestmöglich")
@@ -40,7 +41,7 @@ struct ProTestHome: View {
             label: {
                 Text("Jetzt zertifizierten Test starten")
                     .bold()
-                    .frame(width: 350, height: 52)
+                    .frame(width: (width - 15), height: 52)
                     .background(Color.blue)
                     .foregroundColor(Color.white)
                     .cornerRadius(12)

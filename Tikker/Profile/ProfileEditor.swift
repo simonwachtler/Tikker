@@ -9,43 +9,51 @@ import SwiftUI
 
 struct ProfileEditor: View {
     @Binding var profile: Profile
-    
+    @State var gender = 0
 
     
     var body: some View {
-        NavigationView {
-        Form {
-            Section {
-            HStack {
-                Text("Dein Vorname")
-                    .bold()
-                Divider()
-                TextField("Vorname", text: $profile.firstname)
-            }
+                Form {
+                Section {
                 HStack {
-                    Text("Dein Nachname")
+                    Text("Dein Vorname")
                         .bold()
                     Divider()
-                    TextField("Nachname", text: $profile.lastname)
+                    TextField("Vorname", text: $profile.firstname)
                 }
+                    HStack {
+                        Text("Dein Nachname")
+                            .bold()
+                        Divider()
+                        TextField("Nachname", text: $profile.lastname)
+                    }
 
-                
-            }
+                    
+                }
+                    Section {
+                DatePicker(selection: $profile.birthdate, displayedComponents: .date) {
+                    Text("Dein Geburtstag").bold()
+                }
+                        Picker(selection: $gender, label: Text(""), content: {
+                            Text("X").tag(0)
+                            Text("Weiblich").tag(1)
+                            Text("Männlich").tag(2)
+                        }).pickerStyle(SegmentedPickerStyle())
+                }
             
-            DatePicker(selection: $profile.birthdate, displayedComponents: .date) {
-                Text("Dein Geburtstag").bold()
-            }
-        }
             Section {
                 Toggle(isOn: $profile.getNotifications) {
                     Text("Erhalte Benachrichtigungen")
                         .bold()
             }
         }
+        }
+                .padding(.top, -26)
         .navigationBarTitle("Dein Profil")
         }
     }
-}
+
+
 
 
             
