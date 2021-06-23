@@ -19,6 +19,8 @@
 		92A12E4C260693250054ECAD /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E4B260693250054ECAD /* SignInWithAppleController.swift */; };
 		92A12E5126069B670054ECAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5026069B670054ECAD /* Model.swift */; };
 		92A12E5626069BD50054ECAD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A12E5526069BD50054ECAD /* ViewModel.swift */; };
+		92A46D3E2682411000DB49BC /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A46D3D2682411000DB49BC /* Donate.swift */; };
+		92A46D4F2682529F00DB49BC /* DonationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A46D4E2682529F00DB49BC /* DonationCell.swift */; };
 		92ABB063260A3ED10050D32B /* CountdownVOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABB062260A3ED10050D32B /* CountdownVOne.swift */; };
 		92CC8C1C260C7FA400427BA4 /* Show time and date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC8C1B260C7FA400427BA4 /* Show time and date.swift */; };
 		92CC8C24260C8FC400427BA4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC8C23260C8FC400427BA4 /* Quote.swift */; };
@@ -66,6 +68,8 @@
 		92A12E4B260693250054ECAD /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
 		92A12E5026069B670054ECAD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		92A12E5526069BD50054ECAD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		92A46D3D2682411000DB49BC /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
+		92A46D4E2682529F00DB49BC /* DonationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCell.swift; sourceTree = "<group>"; };
 		92ABB062260A3ED10050D32B /* CountdownVOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownVOne.swift; sourceTree = "<group>"; };
 		92CC8C1B260C7FA400427BA4 /* Show time and date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show time and date.swift"; sourceTree = "<group>"; };
 		92CC8C23260C8FC400427BA4 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				924F8BB52614A75000385C38 /* Pro-Test-Home.swift */,
 				924F8BBA2614AEB700385C38 /* Add-Widget-Home.swift */,
 				92840949261A405A0040C29A /* Impressum.swift */,
+				92A46D3D2682411000DB49BC /* Donate.swift */,
+				92A46D4E2682529F00DB49BC /* DonationCell.swift */,
 			);
 			path = Tikker;
 			sourceTree = "<group>";
@@ -335,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				924F8BB62614A75000385C38 /* Pro-Test-Home.swift in Sources */,
+				92A46D4F2682529F00DB49BC /* DonationCell.swift in Sources */,
 				92ABB063260A3ED10050D32B /* CountdownVOne.swift in Sources */,
+				92A46D3E2682411000DB49BC /* Donate.swift in Sources */,
 				92CD833D25C70D3E00AB9B3A /* ContentView.swift in Sources */,
 				9284094A261A405B0040C29A /* Impressum.swift in Sources */,
 				92F360B325FE751E00E4E30E /* Profile.swift in Sources */,
@@ -514,7 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = Tikker/Tikker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tikker/Preview Content\"";
-				DEVELOPMENT_TEAM = Y75Q7JUZF4;
+				DEVELOPMENT_TEAM = 4838ZPN3B8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tikker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -522,7 +530,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com..Tikker;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Tikker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,7 +546,7 @@
 				CODE_SIGN_ENTITLEMENTS = Tikker/Tikker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tikker/Preview Content\"";
-				DEVELOPMENT_TEAM = Y75Q7JUZF4;
+				DEVELOPMENT_TEAM = 4838ZPN3B8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tikker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -545,7 +554,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com..Tikker;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Tikker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
