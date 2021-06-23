@@ -32,14 +32,15 @@ struct Quote: View {
         }
         }
         
-        .cornerRadius(12)
      //   .padding(.vertical, 20)
        // .padding(.horizontal, 20)
         //.cornerRadius(12)
 
         .background(Color.white)
+        .cornerRadius(12)
         .padding(.vertical, 10)
         .padding(.horizontal, 20)
+
         
     }
 }
