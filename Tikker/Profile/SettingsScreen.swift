@@ -99,6 +99,14 @@ struct ProfileSummary: View {
                             SettingsCell(title: "Quellcode auf Github ansehen", imgName: "chevron.left.slash.chevron.right", clr: .blue)
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
                         }
+                        NavigationLink(destination: Donate(), label: {
+                                        HStack  {
+                                            Image(systemName: "heart.circle")
+                                                .foregroundColor(.pink)
+                                            Text("Unterstütze die App!")
+                                                .padding(.leading, 10)
+
+                                        }                        })
                     }
                     Section(header: Text("Rechtliches"), footer: Text("© Simon Wachtler")) {
                         NavigationLink(
